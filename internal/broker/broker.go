@@ -39,5 +39,5 @@ func (b *Broker) ListenAndServe() error {
 func (b *Broker) handleConn(conn net.Conn) {
 	defer conn.Close()
 	log.Printf("accepted connection from %s", conn.RemoteAddr())
-	connection.HandleConnection(conn)
+	connection.SetUpConnection(conn)
 }
